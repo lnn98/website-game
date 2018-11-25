@@ -7,7 +7,7 @@
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
-.row0{z-index:1;}/* Required for the drop shadow - do not delete, unless the drop shadow isn't wanted */
+.row0{z-index:1;}/*Dùng cho bóng đổ */
 .row1, .row1 a{}
 .row2, .row2 a{}
 .row3, .row3 a{}
@@ -136,10 +136,10 @@
 #copyright *{margin:0; padding:0;}
 
 
-/* Transition Fade
+/* Chuyen
 --------------------------------------------------------------------------------------------------------------- */
 *, *::before, *::after{transition:all .3s ease-in-out;}
-#mainav form *{transition:none !important;}
+#main form *{transition:none !important;}
 
 
 /* Rounded Corners
@@ -158,31 +158,31 @@
 --------------------------------------------------------------------------------------------------------------- */
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
-#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+#main, #breadcrumb, .sidebar nav{line-height:normal;}
+#main .drop::after, #main li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
 
 /* Top Navigation */
-#mainav{}
-#mainav ul{text-transform:uppercase;}
-#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none; text-align:left;}
-#mainav ul ul ul{left:180px; top:0;}
-#mainav li{display:inline-block; position:relative; margin:0 30px 0 0; padding:0;}
-#mainav li:last-child{margin-right:0;}
-#mainav li li{width:100%; margin:0;}
-#mainav li a{display:block; padding:20px 0;}
-#mainav li li a{border:solid; border-width:0 0 1px 0;}
-#mainav .drop{padding-left:15px;}
-#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
-#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
-#mainav .drop::after{top:25px; left:5px;}
-#mainav li li .drop::after{top:15px; left:5px;}
-#mainav ul ul{visibility:hidden; opacity:0;}
-#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+#main{}
+#main ul{text-transform:uppercase;}
+#main ul ul{z-index:9999; position:absolute; width:180px; text-transform:none; text-align:left;}
+#main ul ul ul{left:180px; top:0;}
+#main li{display:inline-block; position:relative; margin:0 30px 0 0; padding:0;}
+#main li:last-child{margin-right:0;}
+#main li li{width:100%; margin:0;}
+#main li a{display:block; padding:20px 0;}
+#main li li a{border:solid; border-width:0 0 1px 0;}
+#main .drop{padding-left:15px;}
+#main li li a, #main li li .drop{display:block; margin:0; padding:10px 15px;}
+#main .drop::after, #main li li .drop::after{content:"\f0d7";}
+#main .drop::after{top:25px; left:5px;}
+#main li li .drop::after{top:15px; left:5px;}
+#main ul ul{visibility:hidden; opacity:0;}
+#main ul li:hover > ul{visibility:visible; opacity:1;}
 
-#mainav form{display:none; margin:0; padding:20px 0;}
-#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
-#mainav form select{width:100%; padding:5px; border:1px solid;}
-#mainav form select option{margin:5px; padding:0; border:none;}
+#main form{display:none; margin:0; padding:20px 0;}
+#main form select, #main form select option{display:block; cursor:pointer; outline:none;}
+#main form select{width:100%; padding:5px; border:1px solid;}
+#main form select option{margin:5px; padding:0; border:none;}
 
 /* Breadcrumb */
 #breadcrumb{padding:150px 0 20px;}
@@ -332,11 +332,11 @@ blockquote::before{color:rgba(0,0,0,.05);}
 
 
 /* Navigation */
-#mainav li a{color:#FFFFFF;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#05B3F2; background-color:inherit;}
-#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
-#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#05B3F2;}
-#mainav form select{color:#FFFFFF; background-color:#4E4E4E; border-color:rgba(255,255,255,.2);/* #FFFFFF */}
+#main li a{color:#FFFFFF;}
+#main .active a, #main a:hover, #main li:hover > a{color:#05B3F2; background-color:inherit;}
+#main li li a, #main .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#main li li:hover > a, #main .active .active > a{color:#FFFFFF; background-color:#05B3F2;}
+#main form select{color:#FFFFFF; background-color:#4E4E4E; border-color:rgba(255,255,255,.2);/* #FFFFFF */}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
 #breadcrumb li:last-child a{color:#05B3F2;}
@@ -383,9 +383,9 @@ table a, #comments a{background-color:inherit;}
 
 	#header{}
 
-	#mainav{}
-	#mainav ul{display:none;}
-	#mainav form{display:block;}
+	#main{}
+	#main ul{display:none;}
+	#main form{display:block;}
 
 	#breadcrumb{}
 
@@ -410,7 +410,9 @@ table a, #comments a{background-color:inherit;}
 @media screen and (max-width:750px){
 	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
 	.fl_left, .fl_right{display:block; float:none;}
-	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
+	/*
+	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}!* Experimental - Needs more testing in different situations, stops double margin when stacking *!
+	*/
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
 
 	#topbar{text-align:center;}
